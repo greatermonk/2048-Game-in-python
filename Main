@@ -1,0 +1,61 @@
+import tkinter as tk
+import random
+
+# Constants
+SIZE = 400
+GRID_LEN = 4
+GRID_PADDING = 10
+
+class Game2048:
+    def __init__(self):
+        self.window = tk.Tk()
+        self.window.title("2048 Game")
+        self.canvas = tk.Canvas(self.window, width=SIZE, height=SIZE, bg="white")
+        self.canvas.pack()
+
+        # Initialize game state
+        self.board = [[0] * GRID_LEN for _ in range(GRID_LEN)]
+        self.add_random_tile()
+        self.draw_board()
+
+        # Bind arrow keys
+        self.window.bind("<Left>", self.move_left)
+        # Bind other arrow keys similarly
+
+    def add_random_tile(self):
+        # Add a random tile (2 or 4) to an empty cell
+        # Implementation omitted for brevity
+        pass
+
+    def draw_board(self):
+        # Draw the game board
+        # Implementation omitted for brevity
+        pass
+
+    def move_left(self, event):
+        # Handle left arrow key
+        # Implementation omitted for brevity
+        pass
+
+    # Implement other move functions (right, up, down) similarly
+
+    def update_ui(self):
+        # Update the UI after each move
+        # Implementation omitted for brevity
+        pass
+
+    def check_game_state(self):
+        # Check if the game is won, lost, or ongoing
+        # Implementation omitted for brevity
+        pass
+
+    def main_loop(self):
+        # Main game loop
+        while True:
+            self.window.update()
+            # Check game state and handle accordingly
+            # Implementation omitted for brevity
+
+if __name__ == "__main__":
+    game = Game2048()
+    game.main_loop()
